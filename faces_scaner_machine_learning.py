@@ -19,12 +19,12 @@ def face_detector(path):
             image = cv2.imread(image_path)
             for x, y, w, z in imagen_location:
                 cv2.rectangle(image, (z, x), (y, w), (0, 0, 255), 1)
-            viewImage(image, '111')
+            viewImage(image, 'image')
         else:
             print(f'No faces found in file: {image}')
 
 
 
 
-path ='C://PycharmProjects/venv/photos/'
+path ='path'
 face_detector(path)
