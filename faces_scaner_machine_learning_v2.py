@@ -42,7 +42,7 @@ def parcer(link):
                 f.write(requests.get(url).content)
 
 
-path ='C://PycharmProjects/venv/photos/'
-link = 'https://woman.rambler.ru/stars/44138341-komu-holostyak-pomog-vygodno-vyyti-zamuzh/'
+path ='path'
+link = 'https:// link'
 parcer(link)
 face_detector(path)
