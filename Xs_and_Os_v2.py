@@ -9,8 +9,8 @@ class Games:
 
     def __init__(self):
         self.player = 0
-        self.Player1 = 'Игрок 1'
-        self.Player2 = 'Игрок 2'
+        self.Player1 = 'Player 1'
+        self.Player2 = 'Player 2'
         self.act1 = []
 
     def play(self):
@@ -18,16 +18,16 @@ class Games:
             act = input(f'{self.Player1 if self.player == 0 else self.Player2}: ')
             act1 = ' '.join(act).split()
             self.act1 = act1
-            b = self.check_round()
-            if b != None:
+            checking = self.check_round()
+            if checking != None:
                 continue
             LIST[int(act1[1]) - 1].insert(int(act1[0]) - 1, ('X' if self.player == 0 else 'O'))
             LIST[int(act1[1]) - 1].pop(int(act1[0]))
             print(' | '.join(LIST[0]))
             print(' | '.join(LIST[1]))
             print(' | '.join(LIST[2]))
-            a = self.check()
-            if a != None:
+            _checking = self.check()
+            if _checking != None:
                 break
             self.player = 0 if self.player == 1 else 1
 
@@ -69,8 +69,8 @@ class Games:
             return 'x'
 
 
-g = Games()
+game = Games()
 print(
-    'Игра началась! Необходимо ввести 2 числа от 1 до 3 соответствующее координатам клетки. '
-    'Первая координата слева направо, вторая сверху вниз!')
-g.play()
+    'The game started! You must enter 2 numbers from 1 to 3 corresponding to the coordinates of the cell.' 
+    'The first coordinate from left to right, the second from top to bottom!')
+game.play()
