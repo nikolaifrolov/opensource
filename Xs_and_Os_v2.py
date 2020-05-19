@@ -32,13 +32,13 @@ class Games:
             self.player = 0 if self.player == 1 else 1
 
     def check_round(self):
+        if 1 > int(self.act1[0]) or int(self.act1[0]) > 3:
+            print('Неверный ход')
+            return 'x'
+        if 1 > int(self.act1[1]) or int(self.act1[1]) > 3:
+            print('Неверный ход')
+            return 'x'
         if LIST[int(self.act1[1]) - 1][int(self.act1[0]) - 1] != '-':
-            print('Неверный ход')
-            return 'x'
-        elif 1 > int(self.act1[0]) or int(self.act1[0]) > 3:
-            print('Неверный ход')
-            return 'x'
-        elif 1 > int(self.act1[1]) or int(self.act1[1]) > 3:
             print('Неверный ход')
             return 'x'
 
