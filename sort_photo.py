@@ -1,6 +1,6 @@
 import os, time, shutil
 
-class Parcing_Foto:
+class Sortfoto:
 
     def path(self):
         self.path = input('Enter the path to sort files: ')
@@ -21,6 +21,6 @@ class Parcing_Foto:
                 shutil.copy2(self.path + '\\' + file, path2 + '\\' + file)
         print('Copied files: ', self.count // 2)
 
-sum = Parcing_Foto()
+sum = Sortfotoo()
 sum.path()
 sum.engine()
