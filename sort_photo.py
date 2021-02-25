@@ -1,13 +1,15 @@
 import os, time, shutil
 
-class Sortfoto:
+class Sorting:
+    
+''' Sort photos by month and years'''
 
     def path(self):
-        self.path = input('Enter the path to sort files: ')
+        self.path = input('Enter the path to sort photos: ')
         self.path_normal = os.path.normpath(self.path)
         self.count = 0
 
-    def engine(self):
+    def processing(self):
         for pathes, names, files in os.walk(self.path_normal):
             print(pathes, names, files)
             for file in files:
@@ -21,6 +23,6 @@ class Sortfoto:
                 shutil.copy2(self.path + '\\' + file, path2 + '\\' + file)
         print('Copied files: ', self.count // 2)
 
-sum = Sortfotoo()
+sum = Sorting()
 sum.path()
-sum.engine()
+sum.processing()
