@@ -8,7 +8,6 @@ def viewImage(image, name_of_window):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-
 def face_detector(path):
     images = os.listdir(path)
     for image in images:
@@ -23,8 +22,5 @@ def face_detector(path):
         else:
             print(f'No faces found in file: {image}')
 
-
-
-
-path ='path'
+path = 'path'
 face_detector(path)
