@@ -22,5 +22,7 @@ def face_detector(path):
         else:
             print(f'No faces found in file: {image}')
 
-path = 'path'
-face_detector(path)
+            
+if __name__ == '__main__':
+    path = 'path'
+    face_detector(path)
