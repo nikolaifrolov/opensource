@@ -23,6 +23,8 @@ class Sorting:
                 shutil.copy2(self.path + '\\' + file, path2 + '\\' + file)
         print('Copied files: ', self.count // 2)
 
-sum = Sorting()
-sum.path()
-sum.processing()
+        
+if __name__ == '__main__':
+    sum = Sorting()
+    sum.path()
+    sum.processing()
